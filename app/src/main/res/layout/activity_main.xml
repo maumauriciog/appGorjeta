@@ -30,7 +30,7 @@
         android:id="@+id/edtValor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="qual o valor total da conta..."
+        android:hint="o valor total da conta..."
         android:layout_marginTop="18sp"
         android:layout_marginStart="16sp"
         android:layout_marginEnd="100sp"
