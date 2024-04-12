@@ -11,7 +11,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16sp"
+        android:layout_marginStart="24sp"
         android:layout_marginTop="30sp"
         android:text="Tips Calculando Gorjetas"
         android:textSize="25dp"
@@ -19,21 +19,24 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="HardcodedText,SpUsage" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gdlBtnVertical"
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
-        android:orientation="vertical"
         android:layout_height="wrap_content"
-        app:layout_constraintGuide_percent="0.50" />
+        android:text="Preencha os campos para calcular a gorjeta"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="HardcodedText" />
+
 
     <EditText
         android:id="@+id/edtValor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="o valor total da conta..."
-        android:layout_marginTop="18sp"
-        android:layout_marginStart="16sp"
+        android:layout_marginStart="24sp"
+        android:layout_marginTop="30sp"
         android:layout_marginEnd="100sp"
+        android:hint="o valor total da conta..."
         app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:ignore="Autofill,HardcodedText" />
 
@@ -41,7 +44,7 @@
         android:id="@+id/edtPeople"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16sp"
+        android:layout_marginStart="24sp"
         android:layout_marginEnd="100sp"
         android:hint="quantidade de pessoas..."
         app:layout_constraintTop_toBottomOf="@+id/edtValor"
