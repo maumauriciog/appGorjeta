@@ -8,23 +8,17 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.appgorjeta.databinding.ActivityMainBinding
+
 
 class MainActivity: AppCompatActivity(){
+    private lateinit var oct: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        oct = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(oct.root)
 
-        val edtValor: EditText = findViewById(R.id.edtValor)
-        val edtPeople = findViewById<EditText>(R.id.edtPeople)
-        val btnClear: Button = findViewById(R.id.btnClean)
-        val btnDone: Button = findViewById(R.id.btnDone)
-
-        btnClear.setOnClickListener{
-
-        }
-
-        btnDone.setOnClickListener{
-
-        }
     }
+
 }
