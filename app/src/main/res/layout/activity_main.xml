@@ -7,51 +7,83 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdlBtnVertical"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.42" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16sp"
-        android:layout_marginTop="30sp"
+        android:layout_marginStart="24sp"
+        android:layout_marginTop="35sp"
         android:text="Tips Calculando Gorjetas"
         android:textSize="25dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="HardcodedText,SpUsage" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gdlBtnVertical"
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
-        android:orientation="vertical"
         android:layout_height="wrap_content"
-        app:layout_constraintGuide_percent="0.50" />
+        android:text="Preencha os campos para o cálculo"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="HardcodedText" />
+
 
     <EditText
         android:id="@+id/edtValor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="qual o valor total da conta..."
-        android:layout_marginTop="18sp"
-        android:layout_marginStart="16sp"
+        android:layout_marginStart="24sp"
+        android:layout_marginTop="34sp"
+        android:maxLength="6"
+        android:inputType="numberDecimal"
         android:layout_marginEnd="100sp"
+        android:hint="o valor total da conta..."
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:ignore="HardcodedText" />
+        tools:ignore="Autofill,HardcodedText" />
 
     <EditText
         android:id="@+id/edtPeople"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16sp"
+        android:layout_marginStart="24sp"
         android:layout_marginEnd="100sp"
+        android:inputType="number"
+        android:maxLength="3"
         android:hint="quantidade de pessoas..."
         app:layout_constraintTop_toBottomOf="@+id/edtValor"
+        tools:ignore="Autofill,HardcodedText" />
+
+    <Button
+        android:id="@+id/btnClean"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="limpar"
+        app:layout_constraintEnd_toStartOf="@+id/gdlBtnVertical"
+        app:layout_constraintStart_toStartOf="@+id/edtPeople"
+        app:layout_constraintTop_toBottomOf="@+id/edtPeople"
         tools:ignore="HardcodedText" />
 
     <Button
-        android:id="@+id/btnClear"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnDone"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="limpar"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:text="calcular"
+        app:layout_constraintEnd_toEndOf="@+id/edtPeople"
+        app:layout_constraintStart_toStartOf="@+id/gdlBtnVertical"
         app:layout_constraintTop_toBottomOf="@+id/edtPeople"
         tools:ignore="HardcodedText" />
 
