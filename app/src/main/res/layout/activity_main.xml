@@ -35,7 +35,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:ignore="HardcodedText" />
 
-
     <EditText
         android:id="@+id/edtValor"
         android:layout_width="match_parent"
@@ -68,7 +67,6 @@
         android:orientation="horizontal"
         android:layout_marginStart="70sp"
         android:layout_marginTop="15dp"
-
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtPeople">
 
@@ -76,25 +74,27 @@
             android:id="@+id/rbDen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10%" />
-
+            android:text="10%"
+            tools:ignore="HardcodedText" />
         <RadioButton
+            android:id="@+id/rbTwo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="15%" />
-
+            android:text="15%"
+            tools:ignore="HardcodedText" />
         <RadioButton
+            android:id="@+id/Three"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="20%" />
+            android:text="20%"
+            tools:ignore="HardcodedText" />
     </RadioGroup>
-
 
     <Button
         android:id="@+id/btnClean"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:text="limpar"
@@ -107,7 +107,7 @@
         android:id="@+id/btnDone"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="10dp"
         android:layout_marginStart="10dp"
         android:text="calcular"
@@ -115,5 +115,4 @@
         app:layout_constraintStart_toStartOf="@+id/gdlBtnVertical"
         app:layout_constraintTop_toBottomOf="@+id/rgPercent"
         tools:ignore="HardcodedText" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
