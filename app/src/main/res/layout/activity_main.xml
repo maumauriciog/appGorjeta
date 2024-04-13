@@ -71,19 +71,19 @@
         app:layout_constraintTop_toBottomOf="@+id/edtPeople">
 
         <RadioButton
-            android:id="@+id/rbDen"
+            android:id="@+id/rbDez"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="10%"
             tools:ignore="HardcodedText" />
         <RadioButton
-            android:id="@+id/rbTwo"
+            android:id="@+id/rbQuinze"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="15%"
             tools:ignore="HardcodedText" />
         <RadioButton
-            android:id="@+id/rdThree"
+            android:id="@+id/rdVinte"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="20%"
