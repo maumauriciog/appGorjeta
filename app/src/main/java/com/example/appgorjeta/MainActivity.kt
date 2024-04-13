@@ -9,33 +9,30 @@ class MainActivity : AppCompatActivity() {
     private lateinit var oct: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        var percente = 0
+        oct = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(oct.root)
 
         //click button btnDone
+        var percente: Int = 0
+        oct.rbDez.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                percente = 10
+            }
+        }
+        oct.rbQuinze.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked){
+                percente = 15
+            }
+        }
+        oct.rdVinte.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked){
+                percente = 20
+            }
+        }
+
         oct.btnDone.setOnClickListener {
-            oct.rbDez.setOnCheckedChangeListener { _, isChecked ->
-                if (isChecked) {
-                    percente = 10
-                }
-            }
-            oct.rbQuinze.setOnCheckedChangeListener { _, isChecked ->
-                if (isChecked){
-                    percente = 15
-                }
-            }
-            oct.rdVinte.setOnCheckedChangeListener { _, isChecked ->
-                if (isChecked){
-                    percente = 20
-                }
-            }
 
-            val tCusto: Float = oct.edtValor.text.toString().toFloat()
-            val qPessoa: Int = oct.edtValor.text.toString().toInt()
-
-            val tGorjeta = (tCusto * percente) / 100
-            val total = tGorjeta * qPessoa
-
-            println("A gorjeta será de $total")
+            println("A gorjeta será de " + 1 + 1)
         }
     }
 }
