@@ -28,9 +28,9 @@
 
     <TextView
         android:id="@+id/txtWrite"
-        android:layout_width="wrap_content"
+        android:layout_width="340dp"
         android:layout_height="wrap_content"
-        android:text="Preencha os campos para o cálculo da gorjeta"
+        android:text="Preencha os campos para o cálculo da gorjeta. As vezes precisa dividir com outra pessoa"
         app:layout_constraintStart_toStartOf="@+id/txtTitle"
         app:layout_constraintTop_toBottomOf="@+id/txtTitle"
         tools:ignore="HardcodedText" />
@@ -40,7 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="40sp"
-        android:layout_marginTop="34sp"
+        android:layout_marginTop="40sp"
         android:maxLength="6"
         android:inputType="numberDecimal"
         android:layout_marginEnd="100sp"
