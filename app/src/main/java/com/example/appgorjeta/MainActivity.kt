@@ -32,8 +32,10 @@ class MainActivity : AppCompatActivity() {
             val tCusto: Float = oct.edtValor.text.toString().toFloat()
             val qPessoa: Int = oct.edtValor.text.toString().toInt()
 
-            val tGorjeta = tCusto * percente / 100
-            println("A gorjeta será de $tGorjeta")
+            val tGorjeta = (tCusto * percente) / 100
+            val total = tGorjeta * qPessoa
+
+            println("A gorjeta será de $total")
         }
     }
 }
