@@ -43,12 +43,15 @@ class MainActivity : AppCompatActivity() {
                     .isNotEmpty()
             ) {
                 val tValor: Float = oct.edtValor.text.toString().toFloat()
-                val tPessoa: Int = oct.edtPeople.text.toString().toInt()
+                val qPessoa: Int = oct.edtPeople.text.toString().toInt()
+
                 val gorjeta: Float = (tValor * pcr) / 100
-                val tPpessoa: Float = gorjeta / tPessoa
+                val tPpessoa: Float = gorjeta / qPessoa
+                val pctPpessoa: Int = pcr / qPessoa
+
 
                 oct.txtTotal.text = "R$ $gorjeta"
-                oct.txtPpessoa.text = "por pessoa será de R$ $tPpessoa"
+                oct.txtPpessoa.text = "por pessoa será de R$ $tPpessoa, que seria $pctPpessoa%"
 
             } else {
                 Toast.makeText(this, "necessário preencher os campos", Toast.LENGTH_LONG).show()
