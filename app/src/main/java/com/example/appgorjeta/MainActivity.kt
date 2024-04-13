@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         oct = ActivityMainBinding.inflate(layoutInflater)
         setContentView(oct.root)
 
-        var pcr: Int = 0
+        var pcr = 0
         oct.rbDez.setOnCheckedChangeListener { _, isCheckedA ->
             if (isCheckedA) {
                 pcr = 10
@@ -35,10 +35,11 @@ class MainActivity : AppCompatActivity() {
                 val tValor: Float = oct.edtValor.text.toString().toFloat()
                 val tPessoa: Int = oct.edtPeople.text.toString().toInt()
                 val gorjeta: Float = (tValor * pcr) / 100
+                val tGorgeta: Float = gorjeta / tPessoa
 
-                println("A gorjeta será de $gorjeta")
+                println("A gorjeta será de $tGorgeta")
             } else{
-                Toast.makeText(this, "Precisa preencher todos os Campos", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "necessário preencher os campos", Toast.LENGTH_LONG).show()
             }
         }
     }
