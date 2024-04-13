@@ -1,5 +1,6 @@
 package com.example.appgorjeta
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +9,7 @@ import com.example.appgorjeta.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var oct: ActivityMainBinding
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         oct = ActivityMainBinding.inflate(layoutInflater)
@@ -29,6 +31,12 @@ class MainActivity : AppCompatActivity() {
                 pcr = 20
             }
         }
+        oct.rbVinteCinco.setOnCheckedChangeListener { _, isChecked ->
+            if(isChecked){
+                pcr = 25
+            }
+        }
+
         //click on the button btnDone
         oct.btnDone.setOnClickListener {
             if (oct.edtValor.text.toString().isNotEmpty() && oct.edtPeople.text.toString()
@@ -37,15 +45,11 @@ class MainActivity : AppCompatActivity() {
                 val tValor: Float = oct.edtValor.text.toString().toFloat()
                 val tPessoa: Int = oct.edtPeople.text.toString().toInt()
                 val gorjeta: Float = (tValor * pcr) / 100
-                val tPay: Float = gorjeta + tValor
+                val tPpessoa: Float = gorjeta / tPessoa
 
+                oct.txtTotal.text = "R$ $gorjeta"
+                oct.txtPpessoa.text = "por pessoa será de R$ $tPpessoa"
 
-
-
-                println("Minha conta deu: $tValor")
-                println("Total Pessoa: $tPessoa")
-                println("Gorjeta: $gorjeta")
-                println("Total Pagar: $tPay")
             } else {
                 Toast.makeText(this, "necessário preencher os campos", Toast.LENGTH_LONG).show()
             }
@@ -54,7 +58,15 @@ class MainActivity : AppCompatActivity() {
         //click on the btnClean
         oct.btnClean.setOnClickListener {
             oct.edtValor.setText("")
+            oct.edtPeople.setText("")
+
+            oct.txtTotal.text = "R$"
+            oct.txtPpessoa.text = "por pessoa será de R$"
+
             oct.rbDez.isChecked = false
+            oct.rbQuinze.isChecked = false
+            oct.rbVinte.isChecked = false
+            oct.rbVinteCinco.isChecked = false
         }
     }
 }

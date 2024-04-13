@@ -12,21 +12,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.44" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gdlTextoResult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.24"/>
+        app:layout_constraintGuide_percent="0.45" />
 
     <TextView
         android:id="@+id/txtTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="40sp"
-        android:layout_marginTop="35sp"
+        android:layout_margin="50sp"
+        android:layout_marginTop="40sp"
         android:text="Tips Calculando Gorjetas"
         android:textSize="25dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,8 +40,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="40sp"
-        android:layout_marginTop="40sp"
-        android:maxLength="6"
+        android:layout_marginTop="55sp"
+        android:maxLength="7"
         android:inputType="numberDecimal"
         android:layout_marginEnd="100sp"
         android:hint="o valor total da conta..."
@@ -72,8 +65,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginStart="81sp"
-
+        android:layout_marginStart="55sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtPeople">
 
@@ -95,14 +87,20 @@
             android:layout_height="wrap_content"
             android:text="20% "
             tools:ignore="HardcodedText" />
+        <RadioButton
+            android:id="@+id/rbVinteCinco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25%"
+            tools:ignore="HardcodedText" />
     </RadioGroup>
 
     <Button
         android:id="@+id/btnClean"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="19dp"
         android:layout_marginEnd="10dp"
         android:text="limpar"
         app:layout_constraintEnd_toStartOf="@+id/gdlBtnVertical"
@@ -114,8 +112,8 @@
         android:id="@+id/btnDone"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:layout_marginTop="10dp"
+
+        android:layout_marginTop="20dp"
         android:layout_marginStart="10dp"
         android:text="calcular"
         app:layout_constraintEnd_toEndOf="@+id/edtPeople"
@@ -127,9 +125,9 @@
         android:id="@+id/txtTítuloResposta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="130dp"
+        android:layout_marginStart="83dp"
         android:textColor="#78250C"
-        android:text="Resultado"
+        android:text="Resultado do Cálculo"
         android:textSize="20dp"
         android:layout_marginTop="60dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -152,7 +150,8 @@
         android:id="@+id/txtTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Total"
+        android:text="R$"
+        android:maxLength="9"
         android:textSize="15dp"
         android:layout_marginStart="40dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -163,12 +162,11 @@
         android:id="@+id/txtPpessoa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="P. Pessoa"
+        android:text="por pessoa seré de R$"
+        android:maxLength="27"
         android:textSize="15dp"
-        app:layout_constraintStart_toStartOf="@+id/gdlTextoResult"
-        app:layout_constraintTop_toBottomOf="@+id/txtGorgeta"
+        app:layout_constraintStart_toStartOf="@+id/txtTotal"
+        app:layout_constraintTop_toBottomOf="@+id/txtTotal"
         tools:ignore="HardcodedText,SpUsage" />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
