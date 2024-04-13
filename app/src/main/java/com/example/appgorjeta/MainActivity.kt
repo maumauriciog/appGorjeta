@@ -7,10 +7,9 @@ import com.example.appgorjeta.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var oct: ActivityMainBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        var percente: Int = 0
+        var percente = 0
 
         //click button btnDone
         oct.btnDone.setOnClickListener {
@@ -30,8 +29,11 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
-            val valor
+            val tCusto: Float = oct.edtValor.text.toString().toFloat()
+            val qPessoa: Int = oct.edtValor.text.toString().toInt()
 
+            val tGorjeta = tCusto * percente / 100
+            println("A gorjeta será de $tGorjeta")
         }
     }
 }
