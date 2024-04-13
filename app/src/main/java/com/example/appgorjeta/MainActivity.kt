@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
 
 
                 oct.txtTotal.text = "R$ $gorjeta"
-                oct.txtPpessoa.text = "por pessoa será de R$ $tPpessoa, que seria $pctPpessoa%"
+                oct.txtPpessoa.text = "por pessoa, o valor de R$ $tPpessoa" + " que seria $pctPpessoa%"
 
             } else {
                 Toast.makeText(this, "necessário preencher os campos", Toast.LENGTH_LONG).show()
