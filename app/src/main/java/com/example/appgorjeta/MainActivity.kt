@@ -12,27 +12,26 @@ class MainActivity : AppCompatActivity() {
         oct = ActivityMainBinding.inflate(layoutInflater)
         setContentView(oct.root)
 
-        //click button btnDone
-        var percente: Int = 0
-        oct.rbDez.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
-                percente = 10
+        var porcentagem: Int = 0
+        oct.rbDez.setOnCheckedChangeListener { _, isCheckedA ->
+            if (isCheckedA) {
+                porcentagem = 10
             }
         }
-        oct.rbQuinze.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked){
-                percente = 15
+        oct.rbQuinze.setOnCheckedChangeListener { _, isCheckedB ->
+            if (isCheckedB) {
+                porcentagem = 15
             }
         }
-        oct.rdVinte.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked){
-                percente = 20
+        oct.rdVinte.setOnCheckedChangeListener { _, isCheckedC ->
+            if (isCheckedC) {
+                porcentagem = 20
             }
         }
 
+        //click on the button btnDone
         oct.btnDone.setOnClickListener {
-
-            println("A gorjeta será de " + 1 + 1)
+            println("A gorjeta será de " + porcentagem)
         }
     }
 }
