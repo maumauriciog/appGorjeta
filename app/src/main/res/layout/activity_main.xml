@@ -14,6 +14,13 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.44" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdlTextoResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.24"/>
+
     <TextView
         android:id="@+id/txtTitle"
         android:layout_width="wrap_content"
@@ -28,9 +35,9 @@
 
     <TextView
         android:id="@+id/txtWrite"
-        android:layout_width="340dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="Preencha os campos para o cálculo da gorjeta. As vezes precisa dividir com outra pessoa"
+        android:text="Preencha os campos para o cálculo da gorjeta. Precisa dividir com outra pessoa?"
         app:layout_constraintStart_toStartOf="@+id/txtTitle"
         app:layout_constraintTop_toBottomOf="@+id/txtTitle"
         tools:ignore="HardcodedText" />
@@ -61,12 +68,12 @@
         tools:ignore="Autofill,HardcodedText" />
 
     <RadioGroup
-        android:id="@+id/rgPercent"
+        android:id="@+id/rbPrc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginStart="81sp"
-        android:layout_marginTop="15dp"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtPeople">
 
@@ -83,7 +90,7 @@
             android:text="15% "
             tools:ignore="HardcodedText" />
         <RadioButton
-            android:id="@+id/rdVinte"
+            android:id="@+id/rbVinte"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="20% "
@@ -94,25 +101,74 @@
         android:id="@+id/btnClean"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:text="limpar"
         app:layout_constraintEnd_toStartOf="@+id/gdlBtnVertical"
         app:layout_constraintStart_toStartOf="@+id/edtPeople"
-        app:layout_constraintTop_toBottomOf="@+id/rgPercent"
+        app:layout_constraintTop_toBottomOf="@+id/rbPrc"
         tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/btnDone"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
         android:text="calcular"
         app:layout_constraintEnd_toEndOf="@+id/edtPeople"
         app:layout_constraintStart_toStartOf="@+id/gdlBtnVertical"
-        app:layout_constraintTop_toBottomOf="@+id/rgPercent"
+        app:layout_constraintTop_toBottomOf="@+id/rbPrc"
         tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/txtTítuloResposta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="130dp"
+        android:textColor="#78250C"
+        android:text="Resultado"
+        android:textSize="20dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnClean"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <TextView
+        android:id="@+id/txtGorgeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valor da Gorjeta"
+        android:textSize="17dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTítuloResposta"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <TextView
+        android:id="@+id/txtTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total"
+        android:textSize="15dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtGorgeta"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <TextView
+        android:id="@+id/txtPpessoa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="P. Pessoa"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="@+id/gdlTextoResult"
+        app:layout_constraintTop_toBottomOf="@+id/txtGorgeta"
+        tools:ignore="HardcodedText,SpUsage" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

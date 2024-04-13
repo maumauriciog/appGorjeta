@@ -14,35 +14,47 @@ class MainActivity : AppCompatActivity() {
         setContentView(oct.root)
 
         var pcr = 0
-        oct.rbDez.setOnCheckedChangeListener { _, isCheckedA ->
-            if (isCheckedA) {
+        oct.rbDez.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
                 pcr = 10
             }
         }
-        oct.rbQuinze.setOnCheckedChangeListener { _, isCheckedB ->
-            if (isCheckedB) {
+        oct.rbQuinze.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
                 pcr = 15
             }
         }
-        oct.rdVinte.setOnCheckedChangeListener { _, isCheckedC ->
-            if (isCheckedC) {
+        oct.rbVinte.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
                 pcr = 20
             }
         }
         //click on the button btnDone
         oct.btnDone.setOnClickListener {
-            if (oct.edtValor.text.toString().isNotEmpty() && oct.edtPeople.text.toString().isNotEmpty()){
+            if (oct.edtValor.text.toString().isNotEmpty() && oct.edtPeople.text.toString()
+                    .isNotEmpty()
+            ) {
                 val tValor: Float = oct.edtValor.text.toString().toFloat()
                 val tPessoa: Int = oct.edtPeople.text.toString().toInt()
                 val gorjeta: Float = (tValor * pcr) / 100
                 val tPay: Float = gorjeta + tValor
 
+
+
+
                 println("Minha conta deu: $tValor")
+                println("Total Pessoa: $tPessoa")
                 println("Gorjeta: $gorjeta")
                 println("Total Pagar: $tPay")
-            } else{
+            } else {
                 Toast.makeText(this, "necessário preencher os campos", Toast.LENGTH_LONG).show()
             }
+        }
+
+        //click on the btnClean
+        oct.btnClean.setOnClickListener {
+            oct.edtValor.setText("")
+            oct.rbDez.isChecked = false
         }
     }
 }
