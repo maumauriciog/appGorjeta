@@ -1,6 +1,7 @@
 package com.example.appgorjeta
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.appgorjeta.databinding.ActivityMainBinding
 
@@ -30,16 +31,15 @@ class MainActivity : AppCompatActivity() {
         }
         //click on the button btnDone
         oct.btnDone.setOnClickListener {
-            if (oct.edtValor.text.toString() == "" && oct.edtPeople.text.toString() == ""){
+            if (oct.edtValor.text.toString().isNotEmpty() && oct.edtPeople.text.toString().isNotEmpty()){
+                val tValor: Float = oct.edtValor.text.toString().toFloat()
+                val tPessoa: Int = oct.edtPeople.text.toString().toInt()
+                val gorjeta: Float = (tValor * pcr) / 100
 
+                println("A gorjeta será de $gorjeta")
+            } else{
+                Toast.makeText(this, "Precisa preencher todos os Campos", Toast.LENGTH_LONG).show()
             }
-
-
-            val tValor: Float = oct.edtValor.text.toString().toFloat()
-            val tPessoa: Int = oct.edtPeople.text.toString().toInt()
-            val gorjeta: Float = (tValor * pcr) / 100
-
-            println("A gorjeta será de $gorjeta")
         }
     }
 }
