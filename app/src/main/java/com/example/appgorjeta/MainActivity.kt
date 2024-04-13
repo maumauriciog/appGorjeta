@@ -12,26 +12,34 @@ class MainActivity : AppCompatActivity() {
         oct = ActivityMainBinding.inflate(layoutInflater)
         setContentView(oct.root)
 
-        var porcentagem = 0
+        var pcr: Int = 0
         oct.rbDez.setOnCheckedChangeListener { _, isCheckedA ->
             if (isCheckedA) {
-                porcentagem = 10
+                pcr = 10
             }
         }
         oct.rbQuinze.setOnCheckedChangeListener { _, isCheckedB ->
             if (isCheckedB) {
-                porcentagem = 15
+                pcr = 15
             }
         }
         oct.rdVinte.setOnCheckedChangeListener { _, isCheckedC ->
             if (isCheckedC) {
-                porcentagem = 20
+                pcr = 20
             }
         }
         //click on the button btnDone
         oct.btnDone.setOnClickListener {
+            if (oct.edtValor.text.toString() == "" && oct.edtPeople.text.toString() == ""){
 
-            println("A gorjeta será de $porcentagem")
+            }
+
+
+            val tValor: Float = oct.edtValor.text.toString().toFloat()
+            val tPessoa: Int = oct.edtPeople.text.toString().toInt()
+            val gorjeta: Float = (tValor * pcr) / 100
+
+            println("A gorjeta será de $gorjeta")
         }
     }
 }
