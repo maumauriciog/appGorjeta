@@ -194,4 +194,14 @@
         app:layout_constraintTop_toBottomOf="@+id/txtTextoPayRest"
         tools:ignore="HardcodedText,SpUsage" />
 
+    <TextView
+        android:id="@+id/txtTotPayPpessoa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="por pessoa será o total de R$"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="@+id/txtTotPayRest"
+        app:layout_constraintTop_toBottomOf="@+id/txtTotPayRest"
+        tools:ignore="HardcodedText,SpUsage" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
