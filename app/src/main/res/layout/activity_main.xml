@@ -163,10 +163,35 @@
         android:id="@+id/txtPpessoa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="por pessoa seré de R$"
+        android:text="por pessoa será de R$"
         android:textSize="15dp"
         app:layout_constraintStart_toStartOf="@+id/txtTotal"
         app:layout_constraintTop_toBottomOf="@+id/txtTotal"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <TextView
+        android:id="@+id/txtTextoPayRest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pagar ao Restaurante - Total"
+        android:textSize="17dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="40dp"
+        android:textColor="#004D40"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPpessoa"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <TextView
+        android:id="@+id/txtTotPayRest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R$"
+        android:maxLength="9"
+        android:textSize="15dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTextoPayRest"
         tools:ignore="HardcodedText,SpUsage" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
