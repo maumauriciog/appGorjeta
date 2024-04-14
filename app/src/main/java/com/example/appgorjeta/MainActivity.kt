@@ -53,9 +53,9 @@ class MainActivity : AppCompatActivity() {
                 val totPayRestaurantPpessoa: Float = totPayRestaurant / qPessoa
 
                 oct.txtTotal.text = "R$ $gorjeta"
-                oct.txtPpessoa.text = "por pessoa, será de R$ $tPpessoa" + " -- $pctPpessoa% --"
+                oct.txtPpessoa.text = "por pessoa, R$ $tPpessoa" + " ou $pctPpessoa%"
                 oct.txtTotPayRest.text = "R$ $totPayRestaurant"
-                oct.txtTotPayPpessoa.text = "por pessoa será o total de R$ $totPayRestaurantPpessoa"
+                oct.txtTotPayPpessoa.text = "por pessoa, R$ $totPayRestaurantPpessoa"
 
             } else {
                 Toast.makeText(this, "necessário preencher os campos", Toast.LENGTH_LONG).show()
@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
             oct.edtPeople.setText("")
 
             oct.txtTotal.text = "R$"
-            oct.txtPpessoa.text = "por pessoa será de R$"
+            oct.txtPpessoa.text = "por pessoa, R$"
             oct.txtTotPayRest.text = "R$"
             oct.txtTotPayPpessoa.text = "R$"
 
