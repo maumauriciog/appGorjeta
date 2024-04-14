@@ -173,7 +173,7 @@
         android:id="@+id/txtTextoPayRest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pagar ao Restaurante - Total"
+        android:text="Pagar ao Restaurante - com a gorjeta"
         android:textSize="17dp"
         android:layout_marginTop="18dp"
         android:layout_marginStart="40dp"

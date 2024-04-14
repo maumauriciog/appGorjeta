@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
                 val totPayRestaurantPpessoa: Float = totPayRestaurant / qPessoa
 
                 oct.txtTotal.text = "R$ $gorjeta"
-                oct.txtPpessoa.text = "por pessoa, será de R$ $tPpessoa" + " ou de $pctPpessoa%"
+                oct.txtPpessoa.text = "por pessoa, será de R$ $tPpessoa" + " -- $pctPpessoa% --"
                 oct.txtTotPayRest.text = "R$ $totPayRestaurant"
                 oct.txtTotPayPpessoa.text = "por pessoa será o total de R$ $totPayRestaurantPpessoa"
 
