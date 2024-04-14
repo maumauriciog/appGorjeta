@@ -9,6 +9,7 @@ import com.example.appgorjeta.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var oct: ActivityMainBinding
+
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +33,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         oct.rbVinteCinco.setOnCheckedChangeListener { _, isChecked ->
-            if(isChecked){
+            if (isChecked) {
                 pcr = 25
             }
         }
@@ -48,10 +49,13 @@ class MainActivity : AppCompatActivity() {
                 val gorjeta: Float = (tValor * pcr) / 100
                 val tPpessoa: Float = gorjeta / qPessoa
                 val pctPpessoa: Int = pcr / qPessoa
-
+                val totPayRestaurant: Float = tValor + gorjeta
+                val totPayRestaurantPpessoa: Float = totPayRestaurant / qPessoa
 
                 oct.txtTotal.text = "R$ $gorjeta"
-                oct.txtPpessoa.text = "por pessoa, o valor de R$ $tPpessoa" + " que seria $pctPpessoa%"
+                oct.txtPpessoa.text = "por pessoa, será de R$ $tPpessoa" + " -- $pctPpessoa% --"
+                oct.txtTotPayRest.text = "R$ $totPayRestaurant"
+                oct.txtTotPayPpessoa.text = "por pessoa será o total de R$ $totPayRestaurantPpessoa"
 
             } else {
                 Toast.makeText(this, "necessário preencher os campos", Toast.LENGTH_LONG).show()
@@ -65,6 +69,8 @@ class MainActivity : AppCompatActivity() {
 
             oct.txtTotal.text = "R$"
             oct.txtPpessoa.text = "por pessoa será de R$"
+            oct.txtTotPayRest.text = "R$"
+            oct.txtTotPayPpessoa.text = "R$"
 
             oct.rbDez.isChecked = false
             oct.rbQuinze.isChecked = false
