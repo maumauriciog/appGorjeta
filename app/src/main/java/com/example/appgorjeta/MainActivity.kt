@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity() {
                 pcr = 20
             }
         }
+
         oct.rbVinteCinco.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
                 pcr = 25
@@ -43,14 +44,14 @@ class MainActivity : AppCompatActivity() {
             if (oct.edtValor.text.toString().isNotEmpty() && oct.edtPeople.text.toString()
                     .isNotEmpty()
             ) {
-                val tValor: Float = oct.edtValor.text.toString().toFloat()
+                val tValor: Double = oct.edtValor.text.toString().toDouble()
                 val qPessoa: Int = oct.edtPeople.text.toString().toInt()
 
-                val gorjeta: Float = (tValor * pcr) / 100
-                val tPpessoa: Float = gorjeta / qPessoa
+                val gorjeta: Double = (tValor * pcr) / 100
+                val tPpessoa: Double = gorjeta / qPessoa
                 val pctPpessoa: Int = pcr / qPessoa
-                val totPayRestaurant: Float = tValor + gorjeta
-                val totPayRestaurantPpessoa: Float = totPayRestaurant / qPessoa
+                val totPayRestaurant: Double = tValor + gorjeta
+                val totPayRestaurantPpessoa: Double = totPayRestaurant / qPessoa
 
                 oct.txtTotal.text = "R$ $gorjeta"
                 oct.txtPpessoa.text = "por pessoa, R$ $tPpessoa" + " ou $pctPpessoa%"
