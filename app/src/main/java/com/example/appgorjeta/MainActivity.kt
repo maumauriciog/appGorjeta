@@ -44,14 +44,14 @@ class MainActivity : AppCompatActivity() {
             if (oct.edtValor.text.toString().isNotEmpty() && oct.edtPeople.text.toString()
                     .isNotEmpty()
             ) {
-                val tValor: Double = oct.edtValor.text.toString().toDouble()
+                val tValor: Float = oct.edtValor.text.toString().toFloat()
                 val qPessoa: Int = oct.edtPeople.text.toString().toInt()
 
-                val gorjeta: Double = (tValor * pcr) / 100
-                val tPpessoa: Double = gorjeta / qPessoa
+                val gorjeta: Float = (tValor * pcr) / 100
+                val tPpessoa: Float = gorjeta / qPessoa
                 val pctPpessoa: Int = pcr / qPessoa
-                val totPayRestaurant: Double = tValor + gorjeta
-                val totPayRestaurantPpessoa: Double = totPayRestaurant / qPessoa
+                val totPayRestaurant: Float = tValor + gorjeta
+                val totPayRestaurantPpessoa: Float = totPayRestaurant / qPessoa
 
                 oct.txtTotal.text = "R$ $gorjeta"
                 oct.txtPpessoa.text = "por pessoa, R$ $tPpessoa" + " ou $pctPpessoa%"
