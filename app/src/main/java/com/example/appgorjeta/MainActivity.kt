@@ -1,6 +1,7 @@
 package com.example.appgorjeta
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -54,10 +55,14 @@ class MainActivity : AppCompatActivity() {
                 val totPayRestaurantPpessoa: Float = totPayRestaurant / qPessoa
 
                 oct.txtTotal.text = "R$ $gorjeta"
-                oct.txtPpessoa.text = "por pessoa, R$ $tPpessoa" + " ou $pctPpessoa%"
+                oct.txtPpessoa.text = "por pessoa, R$ $tPpessoa ou $pctPpessoa%"
                 oct.txtTotPayRest.text = "R$ $totPayRestaurant"
                 oct.txtTotPayPpessoa.text = "por pessoa, R$ $totPayRestaurantPpessoa"
 
+                val intent = Intent(this, SummaryActivity::class.java)
+                intent.apply {
+                    putExtra("block", gorjeta)
+                }
             } else {
                 Toast.makeText(this, "necessário preencher os campos", Toast.LENGTH_LONG).show()
             }
