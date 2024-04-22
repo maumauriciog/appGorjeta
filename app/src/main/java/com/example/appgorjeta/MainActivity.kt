@@ -33,7 +33,6 @@ class MainActivity : AppCompatActivity() {
                 pcr = 20
             }
         }
-
         oct.rbVinteCinco.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
                 pcr = 25

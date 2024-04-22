@@ -16,6 +16,7 @@
 
     <TextView
         android:id="@+id/txtTitle"
+        style="@style/Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40sp"
@@ -41,10 +42,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40sp"
         android:layout_marginTop="55sp"
-        android:maxLength="7"
-        android:inputType="numberDecimal"
         android:layout_marginEnd="100sp"
         android:hint="o valor total da conta..."
+        android:inputType="numberDecimal"
+        android:maxLength="7"
         app:layout_constraintTop_toBottomOf="@+id/txtTitle"
         tools:ignore="Autofill,HardcodedText" />
 
@@ -54,9 +55,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40sp"
         android:layout_marginEnd="100sp"
+        android:hint="quantidade de pessoas..."
         android:inputType="number"
         android:maxLength="3"
-        android:hint="quantidade de pessoas..."
         app:layout_constraintTop_toBottomOf="@+id/edtValor"
         tools:ignore="Autofill,HardcodedText" />
 
@@ -64,8 +65,8 @@
         android:id="@+id/rbPrc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginStart="55sp"
+        android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edtPeople">
 
@@ -75,18 +76,21 @@
             android:layout_height="wrap_content"
             android:text="10% "
             tools:ignore="HardcodedText" />
+
         <RadioButton
             android:id="@+id/rbQuinze"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="15% "
             tools:ignore="HardcodedText" />
+
         <RadioButton
             android:id="@+id/rbVinte"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="20% "
             tools:ignore="HardcodedText" />
+
         <RadioButton
             android:id="@+id/rbVinteCinco"
             android:layout_width="wrap_content"
@@ -95,12 +99,13 @@
             tools:ignore="HardcodedText" />
     </RadioGroup>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnClean"
+        style="@style/Widget.Material3.Button.OutlinedButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20sp"
         android:layout_marginStart="19sp"
+        android:layout_marginTop="20sp"
         android:layout_marginEnd="10sp"
         android:text="limpar"
         app:layout_constraintEnd_toStartOf="@id/gdlBtnVertical"
@@ -112,8 +117,8 @@
         android:id="@+id/btnDone"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20sp"
         android:layout_marginStart="10sp"
+        android:layout_marginTop="20sp"
         android:text="calcular"
         app:layout_constraintEnd_toEndOf="@id/txtTitle"
         app:layout_constraintStart_toStartOf="@id/gdlBtnVertical"
@@ -125,10 +130,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="83dp"
-        android:textColor="#78250C"
-        android:text="Resultado do Cálculo"
-        android:textSize="20sp"
         android:layout_marginTop="60sp"
+        android:text="Resultado do Cálculo"
+        android:textColor="#78250C"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnClean"
         tools:ignore="HardcodedText,SpUsage" />
@@ -137,11 +142,11 @@
         android:id="@+id/txtGorgeta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Valor da Gorjeta"
-        android:textSize="17sp"
-        android:layout_marginTop="7sp"
         android:layout_marginStart="40sp"
+        android:layout_marginTop="7sp"
+        android:text="Valor da Gorjeta"
         android:textColor="#004D40"
+        android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtTítuloResposta"
         tools:ignore="HardcodedText,SpUsage" />
@@ -150,10 +155,10 @@
         android:id="@+id/txtTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="R$"
-        android:maxLength="9"
-        android:textSize="16sp"
         android:layout_marginStart="40sp"
+        android:maxLength="9"
+        android:text="R$"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtGorgeta"
         tools:ignore="HardcodedText,SpUsage" />
@@ -172,11 +177,11 @@
         android:id="@+id/txtTextoPayRest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pagar ao Restaurante - com gorjeta"
-        android:textSize="17sp"
-        android:layout_marginTop="18sp"
         android:layout_marginStart="40sp"
+        android:layout_marginTop="18sp"
+        android:text="Pagar ao Restaurante - com gorjeta"
         android:textColor="#004D40"
+        android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtPpessoa"
         tools:ignore="HardcodedText,SpUsage" />
@@ -185,10 +190,10 @@
         android:id="@+id/txtTotPayRest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="R$"
-        android:maxLength="9"
-        android:textSize="16sp"
         android:layout_marginStart="40sp"
+        android:maxLength="9"
+        android:text="R$"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtTextoPayRest"
         tools:ignore="HardcodedText,SpUsage" />
